@@ -14,6 +14,10 @@ app.use("/api/auth", authRoutes);
 app.use("/api/events", eventRoutes);
 app.use("/api/booking", bookingRoutes);
 
+app.get("/", (req, res) => {
+  res.send("Welcome to BookMyEvent API");
+});
+
 mongoose
   .connect(process.env.MONGO_URL, {})
   .then(() => console.log("MongoDB connected"))
