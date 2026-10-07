@@ -44,6 +44,7 @@ export const AuthProvider = ({ children }) => {
         email,
         password,
       });
+      console.log("Login successful:", data);
 
       setUser(data);
 
@@ -52,6 +53,7 @@ export const AuthProvider = ({ children }) => {
 
       return data;
     } catch (error) {
+      console.log("Login error response:", error);
       console.error("Login failed:", error.response?.data || error.message);
 
       throw error;
@@ -66,9 +68,11 @@ export const AuthProvider = ({ children }) => {
         email,
         password,
       });
+      console.log("Registration successful:", data);
 
       return data;
     } catch (error) {
+      console.log("Registration error response:", error);
       console.error(
         "Registration failed:",
         error.response?.data || error.message,

@@ -2,6 +2,7 @@ import axios from "axios";
 
 const api = axios.create({
   baseURL: "https://bookmyevent-api-karj.onrender.com/api",
+  // "http://localhost:5000/api",
   headers: {
     "Content-Type": "application/json",
   },
